@@ -1,0 +1,53 @@
+name: trace ktls
+description: Capture plaintext from kTLS connections
+homepageURL: 'TODO: Fill the gadget homepage URL'
+documentationURL: 'TODO: Fill the gadget documentation URL'
+sourceURL: 'TODO: Fill the gadget source code URL'
+datasources:
+  ktls:
+    fields:
+      captured:
+        annotations:
+          columns.hidden: "true"
+          description: Bytes captured (up to 256)
+      comm:
+        annotations:
+          columns.width: "12"
+          description: Process name
+      data:
+        annotations:
+          columns.hidden: "true"
+          description: Raw plaintext bytes
+          json.skip: "true"
+      dir_raw:
+        annotations:
+          columns.hidden: "true"
+          description: Direction (0=TX, 1=RX)
+      direction:
+        annotations:
+          columns.minwidth: "2"
+          columns.width: "2"
+          description: Direction
+      len:
+        annotations:
+          columns.hidden: "true"
+          description: Total plaintext length in bytes
+      pid:
+        annotations:
+          columns.hidden: "true"
+          description: Process ID
+      plaintext:
+        annotations:
+          description: Plaintext
+      tid:
+        annotations:
+          columns.hidden: "true"
+          description: Thread ID
+      timestamp_raw:
+        annotations:
+          columns.hidden: "true"
+          description: Event timestamp
+      uid:
+        annotations:
+          columns.hidden: "true"
+          description: User ID
